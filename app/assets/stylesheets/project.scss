@@ -1,3 +1,17 @@
+.home {
+  h3 {
+    color: #aa9c84;
+  }
+
+  .home-header {
+    margin-bottom: 3rem;
+  }
+}
+
+.project-col {
+  margin-bottom: 1.5rem;
+}
+
 .project-card {
   display: block;
   color: #283c46;
@@ -6,4 +20,29 @@
   border-radius: 6px;
   padding: 1.5rem;
   height: 100%;
+
+  &:hover {
+    text-decoration: none;
+    color: #283c46;
+  }
+
+  h4 {
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+  }
+
+  p {
+    font-size: 1.2rem;
+  }
+}
+
+
+main.container {
+  margin-top: 4rem;
+}
+
+@media (min-width: 48em) {
+  .container {
+    max-width: 68rem;
+  }
 }
