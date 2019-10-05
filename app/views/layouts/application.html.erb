@@ -3,48 +3,46 @@
   <head>
     <title>Devcamp</title>
     <%= csrf_meta_tags %>
-    <%= csp_meta_tag %>
 
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
-
-
-
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
-  
-    <nav class="navbar navbar-dark bg-dark navbar-expand-lg navbar-light bg-light p-1">
+    <nav class="navbar navbar-expand-lg justify-content-between">
       <a class="navbar-brand" href="#">
-        <img src="https://www.devwalks.com/assets/img/posts/basecamp-1/navbar-icon.png" alt="">
+        <img src="<%= image_url('navbar-icon') %>" width="37" height="30" class="d-inline-block align-top" alt="">
       </a>
-
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      
-      <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
-        <ul class="navbar-nav">
-          <li class="nav-item active">
-            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Features</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Pricing</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link disabled" href="#">Disabled</a>
-          </li>
-        </ul>
-      </div>
+      <ul class="navbar-nav align-self-center">
+        <li class="nav-item">
+          <a class="nav-link" href="#">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Latest activity</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Pings</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Hey!</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Campfires</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Reports</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Find</a>
+        </li>
+      </ul>
+      <ul class="navbar-nav align-self-center">
+        <li class="nav-item navbar-profile-icon">
+          <a class="nav-link" href="#">B</a>
+        </li>
+      </ul>
     </nav>
-
-
-
-
     <%= yield %>
   </body>
 </html>
