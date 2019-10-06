@@ -22,3 +22,19 @@ document.addEventListener('turbolinks:load', function () {
     }, false)
   }
 })
+
+projectForm.addEventListener('ajax:error', function (xhr, status, err) {
+  // Have a good look at what's returned with a console.log()
+  console.log(xhr)
+
+  // Add an error class to the project name input
+  projectName.classList.add('is-invalid')
+
+  // Create and add our error helper
+  var errorNode = document.createElement('div')
+  var errorTextNode = document.createTextNode('Name must not be blank')
+  errorNode.classList.add('invalid-feedback')
+  errorNode.appendChild(errorTextNode)
+  // Add the error message node using this ugly line of code. Thanks StackOverflow!
+  projectName.parentNode.insertBefore(errorNode, projectName.nextSibling)
+})
